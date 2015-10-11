@@ -6,7 +6,7 @@ RUN mkdir -p /usr/src/mecab \
        | tar -xzC /usr/src/mecab \
     && cd /usr/src/mecab/mecab-0.996 \
     && ./configure --enable-utf8-only && make && make install \
-    && idconfig
+    && ldconfig
 
 # Install IPADic
 RUN curl -SL https://mecab.googlecode.com/files/mecab-ipadic-2.7.0-20070801.tar.gz \
